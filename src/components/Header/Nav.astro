@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../images/logo.png";
+---
+
+<nav class="flex justify-between items-center">
+    <figure class="w-28 h-28 flex justify-center items-center">
+        <Image src={logo} alt="Logo Restaurante" />
+    </figure>
+
+    <ul class="flex justify-center items-center gap-5">
+        <li class="text-white text-xl">
+            <a href="">Home</a>
+        </li>
+        <li class="text-white text-xl">
+            <a href="">About Us</a>
+        </li>
+        <li class="text-white text-xl">
+            <a href="">Menu</a>
+        </li>
+        <li class="text-white text-xl">
+            <a href="">Contact Us</a>
+        </li>
+    </ul>
+
+    <div>
+        <i class="text-white text-2xl bx bxl-facebook-square"></i>
+        <i class="text-white text-2xl bx bxl-instagram-alt"></i>
+    </div>
+</nav>

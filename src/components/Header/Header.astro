@@ -1,0 +1,43 @@
+---
+import Nav from "./Nav.astro";
+---
+
+<header class="w-full h-screen bg-hero-image bg-cover bg-no-repeat bg-center">
+    <div class="container mx-auto px-3">
+        <Nav />
+
+        <div
+            class="w-full flex justify-center items-center flex-col gap-16 content-container"
+        >
+            <h1
+                class="text-6xl lg:text-7xl 2xl:text-8xl font-lora font-bold text-white w-3/4 lg:w-1/2 text-center"
+            >
+                Check out our gourmet <span class="text-amber-500">Menu</span>
+            </h1>
+
+            <div class="flex justify-center items-center gap-10">
+                <p class="text-white text-xl">
+                    <i class="bx bxs-watch text-amber-500"></i>
+                    <span> 9:00-20:00</span>
+                </p>
+
+                <p class="text-white text-xl">
+                    <i class="bx bxs-map text-amber-500"></i>
+                    <span> Politkovskaia 14</span>
+                </p>
+            </div>
+
+            <button
+                class="bg-white text-slate-700 lg:bg-transparent py-3 px-10 border border-white transition-all duration-300 lg:text-white lg:hover:bg-white/50"
+            >
+                Look Menu
+            </button>
+        </div>
+    </div>
+</header>
+
+<style>
+    .content-container {
+        height: calc(100vh - 160px);
+    }
+</style>

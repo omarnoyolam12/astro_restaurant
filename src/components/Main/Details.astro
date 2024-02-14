@@ -1,0 +1,25 @@
+---
+interface Props {
+    icon: string;
+    title: string;
+    text?: string;
+}
+
+const { icon, title, text } = Astro.props;
+---
+
+<div class="flex justify-start items-center gap-10">
+    <div
+        class="w-16 h-16 flex justify-center items-center rounded-full bg-gradient-black shadow-lg"
+    >
+        <i class=`${icon} text-4xl text-zinc-600`></i>
+    </div>
+
+    <div class="space-y-2 flex-1">
+        <p class="text-white text-xl font-bold">{title}</p>
+
+        <p class="text-zinc-400">
+            {text}
+        </p>
+    </div>
+</div>

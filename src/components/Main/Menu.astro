@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import { categories } from "../../data/categories";
+---
+
+<section class="mt-5 lg:mt-20 p-5 container mx-auto">
+    <h3 class="text-3xl text-white text-center font-bold">Menu</h3>
+    <p class="text-center text-zinc-400">
+        Our menu is filled with a variety of categories to choose from.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
+        {
+            categories.map((category) => (
+                <article class="rounded bg-zinc-800 w-full h-60 overflow-hidden group">
+                    <a href="#" class="relative block h-full">
+                        <Image
+                            src={category.img}
+                            alt=""
+                            class="object-cover object-center absolute top-0 left-0 w-full h-full  transition-all duration-300 group-hover:scale-105 z-10"
+                        />
+
+                        <div class="w-full h-full bg-black/70 flex justify-center items-center absolute top-0 left-0 z-20">
+                            <p class="text-white text-2xl font-lora">
+                                {category.category}
+                            </p>
+                        </div>
+                    </a>
+                </article>
+            ))
+        }
+    </div>
+</section>

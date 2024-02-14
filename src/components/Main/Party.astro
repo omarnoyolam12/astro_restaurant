@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+
+import fiesta1 from "../../images/fiesta1.jpg";
+import fiesta2 from "../../images/fiesta2.jpg";
+---
+
+<section class="mt-5 lg:mt-48 bg-zinc-800/30">
+    <div
+        class="container mx-auto flex justify-start items-start flex-col-reverse md:grid md:grid-cols-2 gap-10 lg:gap-32 py-20"
+    >
+        <div class="relative px-5 md:px-0 w-full h-[420px] lg:h-[680px]">
+            <Image
+                src={fiesta1}
+                alt="fiesta 1"
+                class="static md:absolute top-0 left-5 w-full h-full md:w-2/3 md:h-2/3 lg:h-5/6 object-cover object-center border border-white"
+            />
+
+            <Image
+                src={fiesta2}
+                alt="fiesta 2"
+                class="hidden md:block absolute bottom-0 right-0 w-2/3 h-1/2 object-cover object-center border border-white"
+            />
+        </div>
+
+        <div
+            class="flex justify-center items-start flex-col px-5 md:px-0 h-full"
+        >
+            <p class="text-amber-500 font-lora italic text-xl">
+                Party or Events
+            </p>
+
+            <h3 class="text-4xl lg:text-5xl text-white font-bold my-3">
+                Do you hace any plan for any Party or Events?
+            </h3>
+
+            <p class="text-lora italic text-zinc-400">
+                Our Special Dish Of The Party or Events
+            </p>
+
+            <ul class="mt-10 ml-6 space-y-3">
+                <li class="list-image-checkmark text-zinc-300">
+                    Turmeric coconunt rice, chicken safe with peanut sauce
+                </li>
+                <li class="list-image-checkmark text-zinc-300">
+                    Indonesian Fried Rice, Choice of Chicken, Beef Stack
+                </li>
+                <li class="list-image-checkmark text-zinc-300">
+                    Wok-fry thin rice noodles, Rice, noodles, chichen
+                </li>
+            </ul>
+
+            <button
+                class="px-5 py-3 border border-white text-white mt-10 transition-all duration-300 hover:bg-amber-600/20"
+            >
+                Booking Now
+            </button>
+        </div>
+    </div>
+</section>

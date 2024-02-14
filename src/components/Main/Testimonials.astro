@@ -1,0 +1,40 @@
+---
+import { Carousel } from "./Carousel.tsx";
+---
+
+<section class="mt-20 w-full h-[640px] bg-testimonial bg-cover bg-top">
+    <div class="container px-5 mx-auto h-full">
+        <div
+            class="w-full sm:w-2/3 lg:w-1/2 h-full flex justify-center items-start flex-col"
+        >
+            <p class="text-amber-500 italic mb-3">Guessbook</p>
+            <p class="text-5xl text-white font-light">Clients Testimonials</p>
+            <div class="w-48 h-[1px] bg-amber-500 mt-3 mb-10"></div>
+
+            <Carousel client:visible />
+        </div>
+    </div>
+</section>
+
+<style is:global>
+    :root {
+        --swiper-navigation-size: 24px;
+        --swiper-navigation-top-offset: 85%;
+        --swiper-theme-color: #f59e0b;
+    }
+
+    .swiper-button-prev {
+        position: absolute;
+        left: 92%;
+    }
+
+    @media (max-width: 1290px) {
+        :root {
+            --swiper-navigation-top-offset: 90%;
+        }
+
+        .swiper-button-prev {
+            left: 85%;
+        }
+    }
+</style>

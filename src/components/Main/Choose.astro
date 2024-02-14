@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import Details from "./Details.astro";
+
+import service from "../../images/service.jpg";
+---
+
+<section
+    class="p-5 mt-10 lg:mt-32 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-20 h-auto"
+>
+    <div class="w-full h-full relative hidden md:block">
+        <Image
+            src={service}
+            alt="Sercice"
+            class="object-cover object-bottom shadow absolute top-0 left-0 w-full h-full"
+        />
+    </div>
+
+    <div>
+        <p class="font-light font italic text-amber-400 text-2xl">
+            What We Serve
+        </p>
+        <h3 class="text-3xl lg:text-5xl text-white font-bold mt-3">
+            We provide a complete dining experience
+        </h3>
+
+        <div class="space-y-10 mt-10">
+            <Details
+                icon="bx bxs-bowl-hot"
+                title="Grill Mastery"
+                text="Our expert grill transform premium cuts of meet into succulent masterpieces."
+            />
+
+            <Details
+                icon="bx bxs-dish"
+                title="Seafood Sensations"
+                text="Dive into a world of oceanic delight with our Seadood Sensations Service."
+            />
+
+            <Details
+                icon="bx bxs-baguette"
+                title="Custom Grilled Creations"
+                text="Choose your favorite ingredients, and our chefs, will grill them to perfection."
+            />
+        </div>
+    </div>
+</section>
